@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+      - id: github
+        uri: https://github.com/ghaoxiangzZ
+        predicates:
+          - Path=/github/**
+      - id: v2ex
+        uri: https://www.v2ex.com/member/nulihuxi
+        predicates:
+          - Path=/v2ex/**
